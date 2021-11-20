@@ -25,7 +25,7 @@
 
   &__cat {
     font-size: .8rem;
-    color: @black;
+    color: $black;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
   }
@@ -33,7 +33,7 @@
     display:flex;
     justify-content: space-between;
     font-size: 1.06rem;
-    color:@black;
+    color:$black;
     text-transform: uppercase;
     font-weight: 700;
   }

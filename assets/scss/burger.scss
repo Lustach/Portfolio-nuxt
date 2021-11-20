@@ -2,7 +2,7 @@
   width: 30px;
   height: 30px;
   display: none;
-  @media @tablet {
+  @media ($tablet) {
     display: flex;
     z-index:3;
     right: 0;

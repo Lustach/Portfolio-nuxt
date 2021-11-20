@@ -7,14 +7,14 @@
     &-link{
       margin: 0 1.2rem;
       font-size:.8rem;
-      color: rgba(@black,.7);
+      color: rgba($black,.7);
       text-decoration: none;
       &:hover{
         text-decoration: underline;
       }
     }
   }
-  @media @mobile{
+  @media ($mobile){
     padding:0.5rem 0;
   }
 }

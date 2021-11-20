@@ -95,7 +95,7 @@
 
 <script>
 export default {
-  name: 'ModalProject'
+  name: 'Project'
 }
 </script>
 

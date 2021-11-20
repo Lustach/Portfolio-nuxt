@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "~@/assets/scss/vars.scss";
+@import "~@/assets/helpers.scss";
+
+@import "~@/assets/scss/burger.scss";
+
+
+@import "~@/assets/scss/nav.scss";
+@import "~@/assets/scss/intro.scss";
+@import "~@/assets/scss/social.scss";
+@import "~@/assets/scss/btn.scss";
+@import "~@/assets/scss/work.scss";
+@import "~@/assets/scss/works.scss";
+@import "~@/assets/scss/portfolio.scss";
+@import "~@/assets/scss/about.scss";
+@import "~@/assets/scss/reviews.scss";
+@import "~@/assets/scss/news.scss";
+@import "~@/assets/scss/article.scss";
+@import "~@/assets/scss/header.scss";
+@import "~@/assets/scss/footer.scss";
+
+@import "~@/assets/scss/modal.scss";
+@import "~@/assets/scss/modal-resume.scss";
+@import "~@/assets/scss/modal-work.scss";
+@import "~@/assets/scss/contact.scss";
+@import "~@/assets/scss/timeline.scss";
+@import "~@/assets/scss/user.scss";
+
+//@import "scrollbar.less";
+//@import "blocks/container";
+//@import "blocks/header";
+//@import "blocks/user";
+//@import "blocks/nav";
+//@import "blocks/intro";
+//@import "blocks/social";
+//@import "blocks/btn";
+//@import "blocks/works";
+//@import "blocks/work";
+//@import "blocks/portfolio";
+//@import "blocks/about";
+//@import "blocks/reviews";
+//@import "blocks/news";
+//@import "blocks/articles";
+//@import "blocks/footer";
+//@import "blocks/modal";
+//@import "blocks/modal-work";
+//@import "blocks/modal-resume";
+//@import "blocks/timeline";
+//@import "blocks/progress-bar";
+//@import "blocks/contact";
+//@import "blocks/form";
+
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 1rem; //==15px
+  padding-left: 1rem;//==15px
+  margin: 0 auto;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: $black;
+  &.no-scroll{
+    overflow:hidden;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+}
+html {
+  font-size: 15px;
+}
+
+*,*:after,*:before{
+  box-sizing: border-box;
+}

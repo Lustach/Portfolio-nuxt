@@ -2,17 +2,17 @@
   display: flex;
   background:  url(https://placehold.it/477x700) right center no-repeat;
   background-size: 53% 100%;
-  @media @tablet-big{
+  @media ($tablet-big){
     background: url(https://placehold.it/477x700) right top no-repeat;
     background-size: 43% 50%;
     background-position-y: 4%;
     background-position-x: 90%;
   }
-  @media @tablet{
+  @media ($tablet){
     background: none;
   }
   &__left {
-    @media @tablet-big{
+    @media ($tablet-big){
       width: 100%;
     }
     width: 47%;
@@ -24,7 +24,7 @@
     list-style: none;
 
     font-size: .94rem;
-    color: @black;
+    color: $black;
     font-weight: 300;
   }
   &__info-item {

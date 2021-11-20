@@ -47,7 +47,7 @@
         margin-bottom: .2rem;
 
         font-size: 2.12rem;
-        color: @black;
+        color: $black;
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -65,13 +65,13 @@
         margin-bottom: .2rem;
 
         font-size: 1.06rem;
-        color: @black;
+        color: $black;
         font-weight: 700;
     }
     &__client-company {
         font-size: .94rem;
         font-style: italic;
-        color: @gray;
+        color: $gray;
     }
     &__text {
         margin-bottom: 8.66rem;
@@ -79,7 +79,7 @@
         //overflow-y: auto;
         font-size: .8rem;
         line-height: 2;
-        color: @gray;
+        color: $gray;
         font-weight: 300;
         @media (max-width:768px){
             margin-bottom: 2rem;
@@ -105,7 +105,7 @@
 
         font-family: inherit;
         font-size: .94rem;
-        color: @black;
+        color: $black;
         text-transform: uppercase;
     }
 }

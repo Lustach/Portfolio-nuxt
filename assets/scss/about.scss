@@ -1,16 +1,16 @@
 .about {
   margin: 8.4rem 0;
-  @media @tablet-big{
+  @media ($tablet-big){
     margin:1rem;
   }
   &__inner {
     display: flex;
     max-width: 1090px;
-    @media @tablet {
+    @media ($tablet) {
       //display:none;
       flex-direction: column-reverse;
     }
-    @media @mobile{
+    @media ($mobile){
       margin-bottom:1rem;
     }
   }
@@ -19,10 +19,10 @@
     padding-left: 3.2rem;
     margin-top: 2rem;
     width: 50%;
-    @media @tablet {
+    @media ($tablet) {
       width: 100%;
     }
-    @media @mobile{
+    @media ($mobile){
       padding-left:0.5rem;
     }
   }
@@ -30,7 +30,7 @@
   // жоско
   &__photo {
     position: relative;
-    @media @tablet {
+    @media ($tablet) {
       margin-top: 2rem;
       display: flex;
       align-self: center;
@@ -40,14 +40,14 @@
       position: absolute;
       bottom: 0;
       z-index: 2;
-      @media @tablet {
+      @media ($tablet) {
         display: flex;
         align-self: center;
         position: relative;
       }
 
     }
-    @media @mobile {
+    @media ($mobile) {
       width:100%
     }
     width: 50%;
@@ -62,12 +62,12 @@
       left: 1rem;
       bottom: 0;
       z-index: 1;
-      @media @tablet {
+      @media ($tablet) {
         max-width: 280px; //
         width: 100%; //
         max-height: 250px;
       }
-      @media @mobile {
+      @media ($mobile) {
         display: none;
       }
     }
@@ -77,9 +77,9 @@
   //
   &__title {
     font-size: 3rem;
-    color: @black;
+    color: $black;
     font-weight: 700;
-    @media @notebook {
+    @media ($notebook) {
       font-size: 2.5rem;
     }
 
@@ -89,16 +89,16 @@
     font-size: 6.1rem;
     line-height: 1.1;
     margin-bottom: 1.4rem;
-    color: rgba(@black, .15);
+    color: rgba($black, .15);
     font-weight: 700;
     /*ml равносилен position:relative, left:-10px; ????*/
     margin-left: -10px;
     //position:relative;
     //left:-10px;
-    @media @notebook {
+    @media ($notebook) {
       font-size: 4rem;
     }
-    @media @mobile{
+    @media ($mobile){
       font-size: 3rem;
     }
   }
@@ -106,7 +106,7 @@
   &__text {
     font-size: .8rem;
     line-height: 2;
-    color: @gray;
+    color: $gray;
     font-weight: 300;
     margin-bottom: 2.8rem;
   }
