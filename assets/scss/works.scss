@@ -1,20 +1,33 @@
-.works{
+.works {
   padding: 2.8rem 0;
-  &__nav{
-    display:flex;
+
+  &__nav {
+    display: flex;
     justify-content: center;
     margin-bottom: 1.4rem;
-    &-link{
+
+    &-link {
       margin: 0 1.2rem;
-      font-size:.8rem;
-      color: rgba($black,.7);
+      font-size: .8rem;
+      color: rgba($black, .7);
       text-decoration: none;
-      &:hover{
-        text-decoration: underline;
+      position: relative;
+
+      &:hover {
+        //text-decoration: underline;
+        &:before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-bottom: 1px solid gray;
+          position: absolute;
+        }
+
       }
     }
   }
-  @media ($mobile){
-    padding:0.5rem 0;
+
+  @media ($mobile) {
+    padding: 0.5rem 0;
   }
 }

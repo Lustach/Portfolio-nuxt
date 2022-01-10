@@ -28,7 +28,6 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "fibers": "^5.0.0",
     "jest": "^27.0.5",
     "sass": "^1.43.4",
     "sass-loader": "^10.2.0",

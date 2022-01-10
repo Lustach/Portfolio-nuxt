@@ -12,16 +12,13 @@
           </div>
         </div>
         <nav class="nav">
-          <div class="nav__link--block">
-            <a href="#work" class="nav__link">Work</a>
-            <a href="#about_me" class="nav__link">about me</a>
-            <a href="#blog" class="nav__link">blog</a>
-            <a href="#contacts" class="nav__link">contacts</a>
-            <a href="#" class="nav__link nav__link--btn" data-modal="#modal_hire_me">hire me</a>
+          <div class="nav__link--block" :class="{'mobile-menu':isMobileMenu}">
+            <a v-for="(item,key) in menu" :key="key" :href="item.to" class="nav__link" @click="showMobileMenu(e)">{{ item.name }}</a>
+            <a class="nav__link nav__link--btn" data-modal="#modal_hire_me" @click="showHireMe();showMobileMenu()">Нанять</a>
           </div>
         </nav>
         <div class="burger">
-          <img loading="lazy" class="burger__icon" src="@/assets/images/bars.svg" alt=""/>
+          <img loading="lazy" class="burger__icon" src="@/assets/images/bars.svg" alt="" @click="showMobileMenu()"/>
         </div>
       </div>
     </div>
@@ -29,12 +26,57 @@
 </template>
 
 <script>
+import modal from '@/mixins/modal'
+import { setBodyOverflow, deleteBodyOverflow } from '~/util/body'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  mixins: [modal],
+  data: () => ({
+    isMobileMenu: false,
+    menu: [
+      {
+        name: 'Проекты',
+        to: '#work',
+        toShow: true,
+      },
+      {
+        name: 'Обо мне',
+        to: '#about_me',
+        toShow: true,
+      },
+      // {
+      //   name: 'Блог',
+      //   to: '#blog',
+      //   toShow: false,
+      // },
+      // {
+      //   name: 'Контакты',
+      //   to: '#contacts',
+      //   toShow: false,
+      // }
+    ]
+  }),
+  methods: {
+    showMobileMenu () {
+      // if (e && e.to !== '#work') {
+      if (window.innerWidth <= 767) {
+        this.isMobileMenu = !this.isMobileMenu
+        this.isMobileMenu ? setBodyOverflow() : deleteBodyOverflow()
+      }
+      // }
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
+//.mobile-menu {
+//  display: flex;
+//  position: fixed;
+//  height: 100vh;
+//}
+
 .header {
   padding: 1.2rem 0;
   //  @media @tablet-big {
@@ -75,5 +117,10 @@ export default {
     line-height: 1.46rem;
     padding-top: 1px;
   }
+}
+
+.mobile-menu {
+  display: flex !important;
+  height: 100vh;
 }
 </style>

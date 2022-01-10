@@ -2,7 +2,7 @@
   <div class="modal" id="modal_hire_me">
     <div class="modal__dialog  modal__dialog--sm">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" @click="close()">
         <img loading="lazy" src="@/assets/images/times-circle.svg" alt="Close"/>
       </button>
 
@@ -51,7 +51,12 @@
 
 <script>
 export default {
-  name: 'HireMe'
+  name: 'HireMe',
+  methods: {
+    close () {
+      this.$emit('close')
+    },
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
       <div class="footer__inner">
         <div class="footer__credits">
           <div class="footer__copyright">
-            &copy; 2020 All rights reserved :D
+            &copy; {{ new Date().getFullYear() }} Все права защищены
           </div>
 
           <div class="footer__social">
@@ -29,11 +29,11 @@
         </div><!-- /.footer__credits -->
 
         <nav class="footer__nav">
-          <a class="footer__nav-link" href="#">Work</a>
-          <a class="footer__nav-link" href="#">About me</a>
-          <a class="footer__nav-link" href="#">Blog</a>
-          <a class="footer__nav-link" href="#">Contact</a>
-          <a class="footer__nav-link  footer__nav-link--btn" href="#" data-modal="#modal_hire_me">Hire me</a>
+          <a class="footer__nav-link" href="#">Проекты</a>
+          <a class="footer__nav-link" href="#">Обо мне</a>
+          <!--          <a class="footer__nav-link" href="#">Blog</a>-->
+          <!--          <a class="footer__nav-link" href="#">Contact</a>-->
+          <a class="footer__nav-link  footer__nav-link--btn"  data-modal="#modal_hire_me" @click="showHireMe()">Нанять</a>
         </nav>
       </div><!-- /.footer__inner -->
 
@@ -43,8 +43,11 @@
 </template>
 
 <script>
+import modal from '@/mixins/modal'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  mixins: [modal],
 }
 </script>
 

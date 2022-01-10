@@ -2,93 +2,83 @@
   <div class="works" id="work">
     <div class="container"><!--container-->
       <div class="works__nav">
-        <a href="" class="works__nav-link" data-filter="all">Все</a>
-        <a href="" class="works__nav-link" data-filter="app">App</a>
-        <a href="" class="works__nav-link" data-filter="website">Websites</a>
-        <a href="" class="works__nav-link" data-filter="interaction">Interaction</a>
-        <!--      <a href="" class="works__nav-link" data-filter="test">Test</a>-->
-        <!--      <a href="" class="works__nav-link" data-filter="pet-project">Pet-project</a>-->
+        <NuxtLink v-for="(category,key) in worksList" :key="key" to="" class="works__nav-link" @click.native="filterParam = category.key">
+          {{ category.title }}
+        </NuxtLink>
       </div>
       <div class="portfolio">
-        <div class="portfolio__col" data-cat="website">
+        <div class="portfolio__col" v-for="(project, key) in filterProjectList" :key="key" @click="showProjectModal({project,key})">
           <div class="work">
-            <picture><source srcset="https://placehold.it/370x250" type="image/webp"><img loading="lazy" src="https://placehold.it/370x250" alt="" class="work__image"/></picture>
+            <picture>
+              <source :srcset="project.img" type="image/webp">
+              <img loading="lazy" :src="project.img" alt="" class="work__image"/></picture>
             <div class="work__content">
-              <div class="work__cat">category: website</div>
-              <div class="work__title">Project title
-                <time class="work__date" datetime="2020-03-07 19:00">2020</time>
+              <div class="work__cat">
+                {{ project.category }}
+              </div>
+              <div class="work__title">
+                {{ project.title }}
+                <time class="work__date" :datetime="test">{{ project.date }}</time>
               </div>
             </div>
           </div>
         </div>
-        <div class="portfolio__col" data-cat="interaction">
-          <div class="work">
-            <picture><source srcset="https://placehold.it/370x250" type="image/webp"><img loading="lazy" src="https://placehold.it/370x250" alt="" class="work__image"/></picture>
-            <div class="work__content">
-              <div class="work__cat">category: interaction</div>
-              <div class="work__title">Project title
-                <time class="work__date" datetime="2020-03-07 19:00">2020</time>
-              </div>
-            </div>
-          </div>
+        <div v-if="filterProjectList.length===0">
+          Ничего нет
         </div>
-        <div class="portfolio__col" data-cat="app">
-          <div class="work">
-            <picture><source srcset="https://placehold.it/370x250" type="image/webp"><img loading="lazy" src="https://placehold.it/370x250" alt="" class="work__image"/></picture>
-            <div class="work__content">
-              <div class="work__cat">category: app</div>
-              <div class="work__title">Project title
-                <time class="work__date" datetime="2020-03-07 19:00">2020</time>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__col" data-cat="interaction">
-          <div class="work">
-            <picture><source srcset="https://placehold.it/370x250" type="image/webp"><img loading="lazy" src="https://placehold.it/370x250" alt="" class="work__image"/></picture>
-            <div class="work__content">
-              <div class="work__cat">category: interaction</div>
-              <div class="work__title">Project title
-                <time class="work__date" datetime="2020-03-07 19:00">2020</time>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__col" data-cat="app">
-          <div class="work">
-            <picture><source srcset="https://placehold.it/370x250" type="image/webp"><img loading="lazy" src="https://placehold.it/370x250" alt="" class="work__image"/></picture>
-            <div class="work__content">
-              <div class="work__cat">category: app</div>
-              <div class="work__title">Project title
-                <time class="work__date" datetime="2020-03-07 19:00">2020</time>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__col" data-cat="website">
-          <div class="work">
-            <picture><source srcset="https://placehold.it/370x250" type="image/webp"><img loading="lazy" src="https://placehold.it/370x250" alt="" class="work__image"/></picture>
-            <div class="work__content">
-              <div class="work__cat">category:website</div>
-              <div class="work__title">Project title
-                <time class="work__date" datetime="2020-03-07 19:00">2020</time>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!--portfolio-->
-      <!--    модификаторы -- я считаю это калом, стили должны быть либо в css либо не быть на странице вообще-->
-      <div class="text-center">
-        <button class="btn btn--sm">Load more work</button>
       </div>
+      <!--      <my-btn name="">-->
+      <!--        Загрузить ещё-->
+      <!--      </my-btn>-->
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  name: 'Works'
+  name: 'Works',
+  components: {
+    myBtn: () => import('@/components/ui/btn.vue')
+  },
+  mounted () {
+    console.log(this.projectList1)
+  },
+  data: () => ({
+    test: new Date().getFullYear(),
+    filterParam: 'Все',
+    worksList: [
+      {
+        title: 'Все',
+        key: 'Все',
+      }, {
+        title: 'Приложения',
+        key: 'Приложение',
+      }, {
+        title: 'Лендинги',
+        key: 'Лендинг',
+      }, {
+        title: 'Виджеты',
+        key: 'Виджет',
+      },
+    ],
+  }),
+  methods: {
+    showProjectModal (item) {
+      this.$emit('showProject', item)
+    },
+  },
+  computed: {
+    ...mapState({
+      projectList: state => state.projects.projectList
+    }),
+    filterProjectList () {
+      const filteredProjects = this.filterParam !== 'Все' ? this.projectList.filter(e => e.category === this.filterParam) : this.projectList
+      return filteredProjects
+      //  .length ? filteredProjects : this.projectList
+    }
+  }
 }
 </script>
 

@@ -24,18 +24,23 @@
               </svg>
             </a>
           </div>
-          <a href="#" class="btn" data-modal="#modal_hire_me">hire me</a>
-          <button type="button" class="btn" data-modal="#modal_resume">see my resume</button>
+          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>
+          <button type="button" class="btn" data-modal="#modal_resume" @click="showResume()">Резюме</button>
         </div>
-        <picture><source srcset="@/assets/images/photo.webp" type="image/webp"><img loading="lazy" src="@/assets/images/photo.png" class="intro__photo" alt=""/></picture>
+        <picture>
+          <source srcset="@/assets/images/photo.webp" type="image/webp">
+          <img loading="lazy" src="@/assets/images/photo.png" class="intro__photo" alt=""/></picture>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import modal from '@/mixins/modal'
+
 export default {
-  name: 'Intro'
+  name: 'Intro',
+  mixins: [modal]
 }
 </script>
 
