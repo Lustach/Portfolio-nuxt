@@ -1,6 +1,11 @@
 .form {
   &__group {
     margin-bottom: 1.8rem;
+
+    span {
+      font-size: 12px;
+      color: $error;
+    }
   }
 
   &__label {
@@ -25,15 +30,25 @@
     line-height: 1.2;
     font-weight: 300;
     color: $black;
+    margin-bottom: 5px;
 
     &:focus {
       outline: none;
       border-color: #36abc7;
     }
 
+    &-error {
+      border-color: $error;
+
+      &:focus {
+        border-color: $error;
+      }
+    }
+
     &::placeholder {
       color: $black;
     }
+
   }
 
   &__textarea {

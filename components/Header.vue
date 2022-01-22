@@ -27,7 +27,7 @@
 
 <script>
 import modal from '@/mixins/modal'
-import { setBodyOverflow, deleteBodyOverflow } from '~/util/body'
+// import { setBodyOverflow, deleteBodyOverflow } from '~/util/body'
 
 export default {
   name: 'Header',
@@ -58,14 +58,6 @@ export default {
     ]
   }),
   methods: {
-    showMobileMenu () {
-      // if (e && e.to !== '#work') {
-      if (window.innerWidth <= 767) {
-        this.isMobileMenu = !this.isMobileMenu
-        this.isMobileMenu ? setBodyOverflow() : deleteBodyOverflow()
-      }
-      // }
-    }
   }
 }
 </script>
