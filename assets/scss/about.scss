@@ -109,6 +109,20 @@
     color: $gray;
     font-weight: 300;
     margin-bottom: 2.8rem;
+    ul,ol{
+      padding-left: 0.6rem;
+    }
+    > ul{
+      padding: 0;
+    }
+
+  }
+  &__list__container{
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    //flex-wrap: wrap;
+    max-width: 450px;
   }
 }
 
