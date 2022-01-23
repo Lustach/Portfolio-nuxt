@@ -1,6 +1,6 @@
 <template>
   <div>
-    test
+    t
     {{ test }}
     {{ post }}
     <a id="loadFile" download="Таблица поступлений" />
