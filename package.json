@@ -9,7 +9,6 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "server": "nodemon server.js",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",

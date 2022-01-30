@@ -70,7 +70,7 @@
                   <div v-for="(skill,key) in skillList.hard" :key="key" class="progress-bar__item">
                     <div class="progress-bar__right">
                       <div class="progress-bar__bar">
-                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}"/>
+                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}" />
                       </div>
                     </div>
                   </div>
@@ -91,7 +91,7 @@
                   <div v-for="(skill,key) in skillList.soft" :key="key" class="progress-bar__item">
                     <div class="progress-bar__right">
                       <div class="progress-bar__bar">
-                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}"/>
+                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}" />
                       </div>
                     </div>
                   </div>
@@ -104,7 +104,6 @@
           <a class="btn" href="#" data-modal="#modal_hire_me" @click="showHireMe()">Нанять</a>
         </div>
       </div><!-- /.timeline -->
-
     </div><!-- /.modal__content -->
   </div><!-- /.modal__dialog -->
 </template>
@@ -122,16 +121,17 @@ export default {
         date_end: '2022',
         company: 'Trinity Group',
         position: 'Vue Front-end разработчик',
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est
-                  corporis in facilis eum quae sint aliquam, ipsam?`
+        description:
+          `Разработка личного кабинета сайта-агреггатора благотворительных фондов(НКО) с нуля с использованием Vue,Vuex,Vue-Router,Element-ui, Cypress. Доработка и разработка лендингов.
+          Создание виджета с использованием Typescript, webpack
+        `
       }, {
         date_start: '2020',
         date_end: '2021',
         company: 'CraftGroup',
         position: 'Vue Front-end разработчик',
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est
-                  corporis in
-                  facilis eum quae sint aliquam, ipsam?`
+        description:
+          'Создание проектов с нуля, доработка crm с использованием Vue, Vuex, Vue-router Vuetify, Quasar, адаптивная вёрстка проектов с использованием pug, sass, gulp, webpack, bootstrap'
       }, {
         date_start: '2020',
         date_end: '2021',
@@ -145,9 +145,9 @@ export default {
         date_end: '2020',
         company: 'Астелит',
         position: 'Vue Front-end разработчик',
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est
-                  corporis in
-                  facilis eum quae sint aliquam, ipsam?`
+        description:
+          `Создание основного интерфейса CMS системы для автоматизации бизнеса с использованием Vue.js, Vuex, Vue-router, TypeScript. Разработка лендинга с использованием Nuxt.
+           Рефакторинг проекта на основе Vuetify. Доработка интерфейса CRM, разработка виджетов для CMS на Vue, TypeScript, Vuetify `
       }],
     skillList: {
       hard: [

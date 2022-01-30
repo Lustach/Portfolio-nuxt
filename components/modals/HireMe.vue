@@ -128,7 +128,6 @@ export default {
       }
     },
     custom (context) {
-      console.log(context, this, 'CONTEWXT')
       if (context.flags.required && !context.value && !context.flags.validated) {
         console.log('123215215')
         return {

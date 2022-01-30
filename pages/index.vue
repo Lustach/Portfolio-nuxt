@@ -1,17 +1,17 @@
 <template>
   <div>
-    <Header @showResume="showModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
-    <Intro @showResume="showModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
-    <Works @showProject="showProject($event)"/>
-    <About @showResume="showModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
+    <Header />
+    <Intro />
+    <Works @showProject="showProject($event)" />
+    <About />
     <!--    <Reviews/>-->
     <!--    <News/>-->
-    <Footer @showHireMe="showModal('isShowHireMe')"/>
+    <Footer @showHireMe="showModal('isShowHireMe')" />
     <!--    modals-->
     <!--    todo для кеширования картинок хттп нужно давать уникаальные названия-->
-    <Project v-if="isShowProject" :project="project.project" @close="closeModal('isShowProject')"/>
-    <Resume v-show="isShowResume" @close="closeModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
-    <HireMe v-show="isShowHireMe" @close="closeModal('isShowHireMe')"/>
+    <Project v-if="isShowProject" :project="project.project" @close="closeModal('isShowProject')" />
+    <Resume v-show="isShowResume" @close="closeModal('isShowResume')" @showHireMe="showModal('isShowHireMe')" />
+    <HireMe v-show="isShowHireMe" @close="closeModal('isShowHireMe')" />
   </div>
   <!--  <Header/>-->
 </template>
@@ -26,14 +26,6 @@ export default Vue.extend({
     Resume: () => import('@/components/modals/Resume.vue'),
     HireMe: () => import('@/components/modals/HireMe.vue')
   },
-  // async asyncData ({ params, $axios }) {
-  //   const result = await $axios.get('http://localhost:9000/')
-  //   console.log(result.data,'fsadflj')
-  //   return result.data
-  //   // console.log(params,$axios)
-  //   // const post = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-  //   // return { post }
-  // },
   data: () => ({
     test: [],
     isShowProject: false,
@@ -44,6 +36,18 @@ export default Vue.extend({
       key: ''
     }
   }),
+  created () {
+    // this.$nuxt.$on('close', () => {
+    //   this.showModal('isShowResume')
+    // })
+    //
+    this.$nuxt.$on('showHireMe', () => {
+      this.showModal('isShowHireMe')
+    })
+    this.$nuxt.$on('showResume', () => {
+      this.showModal('isShowResume')
+    })
+  },
   methods: {
     showProject (projectItem: { project: string; key: string }) {
       this.project = projectItem

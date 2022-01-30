@@ -13,7 +13,7 @@
         </div>
         <nav class="nav">
           <div class="nav__link--block" :class="{'mobile-menu':isMobileMenu}">
-            <a v-for="(item,key) in menu" :key="key" :href="item.to" class="nav__link" @click="showMobileMenu(e)">{{ item.name }}</a>
+            <a v-for="(item,key) in menu" :key="key" :href="item.to" class="nav__link" @click="showMobileMenu()">{{ item.name }}</a>
             <a class="nav__link nav__link--btn" data-modal="#modal_hire_me" @click="showHireMe();showMobileMenu()">Нанять</a>
           </div>
         </nav>

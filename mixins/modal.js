@@ -5,13 +5,14 @@ export default {
     close () {
       setBodyOverflow()
       this.$emit('close')
+      // this.$nuxt.$emit('close')
     },
     showHireMe () {
       console.log('hi')
-      this.$emit('showHireMe')
+      this.$nuxt.$emit('showHireMe')
     },
     showResume () {
-      this.$emit('showResume')
+      this.$nuxt.$emit('showResume')
     },
     showMobileMenu () {
       // if (e && e.to !== '#work') {
