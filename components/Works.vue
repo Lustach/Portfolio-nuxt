@@ -1,17 +1,19 @@
 <template>
-  <div class="works" id="work">
-    <div class="container"><!--container-->
+  <div id="work" class="works">
+    <div class="container">
+      <h5 style="text-align: center;padding: 1rem 0 1.4rem 0;">Некоторые примеры разработанных мной приложений</h5>
+      <!--container-->
       <div class="works__nav">
         <NuxtLink v-for="(category,key) in worksList" :key="key" to="" class="works__nav-link" @click.native="filterParam = category.key">
           {{ category.title }}
         </NuxtLink>
       </div>
       <div class="portfolio">
-        <div class="portfolio__col" v-for="(project, key) in filterProjectList" :key="key" @click="showProjectModal({project,key})">
+        <div v-for="(project, key) in filterProjectList" :key="key" class="portfolio__col" @click="showProjectModal({project,key})">
           <div class="work">
             <picture>
               <source :srcset="project.img" type="image/webp">
-              <img loading="lazy" :src="project.img" alt="" class="work__image"/></picture>
+              <img loading="lazy" :src="project.img" alt="" class="work__image"></picture>
             <div class="work__content">
               <div class="work__cat">
                 {{ project.category }}
@@ -42,32 +44,36 @@ export default {
   components: {
     myBtn: () => import('@/components/ui/btn.vue')
   },
-  mounted () {
-    console.log(this.projectList1)
-  },
   data: () => ({
     test: new Date().getFullYear(),
     filterParam: 'Все',
     worksList: [
       {
         title: 'Все',
-        key: 'Все',
+        key: 'Все'
       }, {
         title: 'Приложения',
-        key: 'Приложение',
+        key: 'Приложение'
       }, {
         title: 'Лендинги',
-        key: 'Лендинг',
+        key: 'Лендинг'
       }, {
         title: 'Виджеты',
-        key: 'Виджет',
+        key: 'Виджет'
       },
-    ],
+      {
+        title: 'Разное',
+        key: 'Разное'
+      }
+    ]
   }),
+  mounted () {
+    console.log(this.projectList1)
+  },
   methods: {
     showProjectModal (item) {
       this.$emit('showProject', item)
-    },
+    }
   },
   computed: {
     ...mapState({

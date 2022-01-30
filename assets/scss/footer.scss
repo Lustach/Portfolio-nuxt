@@ -54,8 +54,12 @@
     align-items: center;
 
     a {
-      margin-right: 1.2rem;
+      margin-right: 0.2rem;
       text-decoration: none;
+      svg{
+        border-radius: 20px;
+        padding: 0.4rem;
+      }
     }
 
     @media ($mobile) {

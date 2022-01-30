@@ -1,16 +1,17 @@
 <template>
   <div>
-    <Header @showResume="showModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
-    <Intro @showResume="showModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
-    <Works @showProject="showProject($event)"></Works>
-    <About @showResume="showModal('isShowResume')" @showHireMe="showModal('isShowHireMe')"/>
+    <Header />
+    <Intro />
+    <Works @showProject="showProject($event)" />
+    <About />
     <!--    <Reviews/>-->
     <!--    <News/>-->
-    <Footer @showHireMe="showModal('isShowHireMe')"/>
+    <Footer @showHireMe="showModal('isShowHireMe')" />
     <!--    modals-->
-    <Project @close="closeModal('isShowProject')" v-if="isShowProject" :project="project.project"/>
-    <Resume @close="closeModal('isShowResume')" @showHireMe="showModal('isShowHireMe')" v-if="isShowResume"/>
-    <HireMe @close="closeModal('isShowHireMe')" v-if="isShowHireMe"/>
+    <!--    todo для кеширования картинок хттп нужно давать уникаальные названия-->
+    <Project v-if="isShowProject" :project="project.project" @close="closeModal('isShowProject')" />
+    <Resume v-show="isShowResume" @close="closeModal('isShowResume')" @showHireMe="showModal('isShowHireMe')" />
+    <HireMe v-show="isShowHireMe" @close="closeModal('isShowHireMe')" />
   </div>
   <!--  <Header/>-->
 </template>
@@ -18,7 +19,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { setBodyOverflow, deleteBodyOverflow } from '~/util/body'
-
+// import HireMe from '@/components/modals/HireMe.vue'
 export default Vue.extend({
   components: {
     Project: () => import('@/components/modals/Project.vue'),
@@ -26,33 +27,49 @@ export default Vue.extend({
     HireMe: () => import('@/components/modals/HireMe.vue')
   },
   data: () => ({
-    test: false,
+    test: [],
     isShowProject: false,
     isShowResume: false,
     isShowHireMe: false,
     project: {
       project: '',
-      key: '',
+      key: ''
     }
   }),
+  created () {
+    // this.$nuxt.$on('close', () => {
+    //   this.showModal('isShowResume')
+    // })
+    //
+    this.$nuxt.$on('showHireMe', () => {
+      this.showModal('isShowHireMe')
+    })
+    this.$nuxt.$on('showResume', () => {
+      this.showModal('isShowResume')
+    })
+  },
   methods: {
-    showProject (projectItem) {
+    showProject (projectItem: { project: string; key: string }) {
       this.project = projectItem
       this.isShowProject = true
       setBodyOverflow()
     },
-    showModal (varName) {
+    showModal (varName: string | number) {
+      // @ts-ignore
       this[varName] = true
       setBodyOverflow()
     },
-    closeModal (varName) {
+    closeModal (varName: string | number) {
       if (varName) {
+        // @ts-ignore
         this[varName] = false
-        deleteBodyOverflow()
+        if (!(this.isShowHireMe || this.isShowResume || this.isShowProject)) {
+          deleteBodyOverflow()
+        }
       }
-    },
+    }
 
-  },
+  }
   // computed:()=>({
   //   ...mapState(['toggleIsShowProjectModal']),
   // })
