@@ -10,7 +10,7 @@ export default {
         goal: 'Организация управления процессами электронного документооборота в органах власти',
         clientOrCompany: 'ГП "АСТЕЛИТ"',
         category: 'Приложение',
-        skillStacks: ['vue', 'Vuetify'],
+        skillStacks: ['vue', 'Vuetify', 'TypeScript'],
         // путь к картинкам в assets/images/projects
         imgList: ['corella/img.png', 'corella/img_1.png', 'corella/img_2.png'],
         // img: 'https://placehold.it/370x250',
@@ -18,11 +18,8 @@ export default {
         date: '2019'
       }, {
         title: 'Rabota Today',
-        description: 'Разработана система, поддерживающая полный жизненный цикл управления документами и автоматизации бизнес-процессов. ' +
-          'Предназначена для повышения прозрачности, управляемости и эффективности работы. Система охватывает все этапы жизненного цикла документов: ' +
-          'от подготовки проектов до организации архивного хранения документов, с обеспечением функций электронного архива. ' +
-          'Продукт поддерживает использование электронных цифровых подписей для защиты документов.',
-        goal: 'Организация управления процессами электронного документооборота в органах власти',
+        description: 'Классический сайт для поиска работы. Принимал участие непосредственно в разработке личного кабинета.',
+        goal: 'Топ 1 сайт для поиска работы в Донецке',
         clientOrCompany: 'CraftGroup',
         category: 'Приложение',
         link: 'https://rabota.today',
@@ -47,7 +44,7 @@ export default {
       },
       {
         title: 'Английский для IT-специалистов',
-        description: 'Обычный лендинг',
+        description: 'Классический лендинг',
         clientOrCompany: 'CraftGroup',
         category: 'Лендинг',
         link: 'https://en-land.craft-group.xyz/',
@@ -60,7 +57,7 @@ export default {
       },
       {
         title: 'Портфолио для Behance',
-        description: 'Чуть менее обычный лендинг',
+        description: 'Необычный лендинг',
         clientOrCompany: 'CraftGroup',
         category: 'Лендинг',
         link: 'https://behance3.craft-group.xyz/',
@@ -73,7 +70,7 @@ export default {
       },
       {
         title: 'Хромотограф.ру',
-        description: 'Обычный Лендинг',
+        description: 'Классический многостраничный лендинг',
         clientOrCompany: 'CraftGroup',
         category: 'Лендинг',
         link: 'https://html.craft-group.xyz/hromotograf/',
@@ -86,8 +83,8 @@ export default {
       },
       {
         title: 'SellingsReviews',
-        description: 'Выполнено полное проектирование проекта (с нуля) и реализация бизнес-задач по созданию системы оценок. Проект позволяет продвигать товары на различных' +
-          ' площадках, в котором продавцы продвигают товары, а клиенты зарабатывают',
+        description: 'Выполнено полное проектирование проекта-прототипа (с нуля) и реализация бизнес-задач по созданию системы оценок. Проект позволяет продвигать товары на различных' +
+          ' площадках, в котором продавцы продвигают товары, а клиенты зарабатывают на отзывах',
         clientOrCompany: 'Freelance',
         category: 'Приложение',
         link: 'https://sellingreviews.ru/lk/login',
@@ -112,11 +109,11 @@ export default {
         date: '2020 - 2021'
       }, {
         title: 'VoBlago',
-        description: 'Выполнено проектирование и разработка с нуля личного кабинета для проекта-агрегатора фондов НКО...........',
+        description: 'Выполнено проектирование и разработка с нуля личного кабинета для проекта-агрегатора фондов НКО. Приложение позволяет удобно просматривать фонды и программы, осуществлять пожертвования, как в криптовалюте, так и через обычные платёжные системы. Личный кабинет позволяет зарегистрировать фонд пользователя, проводить быструю настройку его данных, подключать 2 факторную аутентификацию а так же просматривать поступления и собранные деньги с терминалов в виде графиков и таблиц. ',
         clientOrCompany: 'TrinityGroup',
         category: 'Приложение',
         link: 'https://voblago.io/',
-        skillStacks: ['vue', 'Element-UI', 'Cypress'],
+        skillStacks: ['vue', 'Element-UI', 'Cypress', 'Jest'],
         // путь к картинкам в assets/images/projects
         imgList: ['zapoisk/img.png', 'zapoisk/img_1.png', 'zapoisk/img_2.png', 'zapoisk/img_3.png', 'zapoisk/img_4.png'],
         // img: 'https://placehold.it/370x250',
@@ -124,7 +121,7 @@ export default {
         date: '2021 - 2022'
       }, {
         title: 'BlagoeDelo',
-        description: 'Выполнено проектирование и разработка с нуля личного кабинета для проекта-агрегатора фондов НКО...........',
+        description: 'Классический сайт-визитка',
         clientOrCompany: 'TrinityGroup',
         category: 'Лендинг',
         link: 'https://blagoedelo.org/',
@@ -136,11 +133,11 @@ export default {
         date: '2021'
       }, {
         title: 'Крипто-виджет Voblago',
-        description: 'Выполнено проектирование и разработка с нуля личного кабинета для проекта-агрегатора фондов НКО...........',
+        description: 'Разработан виджет без использования фреймворков, позволяющий создавать крипто транзакции. Виджет можно подключать на разные сайт как путём подключения скрипта, так и используя iframe',
         clientOrCompany: 'TrinityGroup',
         category: 'Виджет',
         link: 'https://voblago.io/',
-        skillStacks: ['vue', 'Element-UI', 'Cypress'],
+        skillStacks: ['TypeScript', 'webpack'],
         // путь к картинкам в assets/images/projects
         imgList: ['zapoisk/img.png', 'zapoisk/img_1.png', 'zapoisk/img_2.png', 'zapoisk/img_3.png', 'zapoisk/img_4.png'],
         // img: 'https://placehold.it/370x250',
