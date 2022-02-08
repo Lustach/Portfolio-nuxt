@@ -1,7 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
   head: {
-    title: 'Lust Vlad Portfolio',
+    title: 'Lusta Vlad Portfolio',
     // <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     //   <link rel="stylesheet" href="css/style.min.css">
     //     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -25,13 +26,11 @@ export default {
         content: 'telephone=no'
       }
     ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

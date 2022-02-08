@@ -4,7 +4,7 @@
       <div class="header__inner">
         <div class="user">
           <div class="user__avatar">
-            <img loading="lazy" src="https://placehold.it/57/333" alt=""/>
+<!--            <img loading="lazy" src="" alt=""/>-->
           </div>
           <div class="user__content">
             <div class="user__name">Влад <br> Луста</div>
@@ -86,11 +86,12 @@ export default {
   display: flex;
 
   &__avatar {
-    width: 57px;
-    height: 57px;
-    padding-right: 9px;
+    width: 47px;
+    height: 47px;
+    margin-right: 9px;
     box-sizing: content-box;
-
+    background: #8D8D8E;
+    border-radius: 50%;
     img {
       border-radius: 50%;
     }

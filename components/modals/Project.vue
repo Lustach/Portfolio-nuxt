@@ -2,7 +2,7 @@
   <div id="modal_project" class="modal">
     <div class="modal__dialog">
       <button class="modal__close" type="button" @click="close()">
-        <img loading="lazy" src="@/assets/images/times-circle.svg" alt="Close">
+        <img loading="lazy" src="@/assets/images/times-circle.svg" alt="Close" />
       </button>
       <div class="modal-work">
         <div class="modal-work__preview">
@@ -10,19 +10,49 @@
           <!--          <img v-for="(item,key) in project.imgList" loading="lazy" class="modal-work__photo" :src="require(`~/assets/images/projects/${item}`)" alt=""-->
           <!--               :key="key"-->
           <!--          />-->
-          <img v-if="activeImg" :src="require(`~/assets/images/projects/${activeImg}`)" alt="" loading="lazy" class="modal-work__photo">
+          <img
+            v-if="activeImg"
+            :src="require(`~/assets/images/projects/${activeImg}`)"
+            alt=""
+            loading="lazy"
+            class="modal-work__photo"
+          />
           <!--          <div>-->
           <!--            hui-->
           <!--          </div>-->
           <div class="carousel__items_circle__wrapper">
-            <div v-for="(item,key) in project.imgList" :key="key" class="carousel__items_circle" />
+            <div
+              v-for="(item, key) in project.imgList"
+              :key="key"
+              class="carousel__items_circle"
+            />
           </div>
           <div v-if="" class="carousel__actions">
-            <button class="modal-work__btn prev" type="button" style="transform: scale(3.5);" @click="showPrevImg()">
-              <img loading="lazy" src="@/assets/images/chevron-left.svg" height="11" alt="">
+            <button
+              class="modal-work__btn prev"
+              type="button"
+              style="transform: scale(3.5)"
+              @click="showPrevImg()"
+            >
+              <img
+                loading="lazy"
+                src="@/assets/images/chevron-left.svg"
+                height="11"
+                alt=""
+              />
             </button>
-            <button class="modal-work__btn prev" type="button" style="transform: scale(3.5);" @click="showNextImg()">
-              <img loading="lazy" src="@/assets/images/chevron-right.svg" height="11" alt="">
+            <button
+              class="modal-work__btn prev"
+              type="button"
+              style="transform: scale(3.5)"
+              @click="showNextImg()"
+            >
+              <img
+                loading="lazy"
+                src="@/assets/images/chevron-right.svg"
+                height="11"
+                alt=""
+              />
             </button>
           </div>
           <!--          <img :src="require('~/assets/images/projects/corella/img_2.png')" alt="">-->
@@ -31,17 +61,16 @@
         <div class="modal-work__content">
           <div class="modal-work__header">
             <h3 class="modal-work__title">
-              {{ project.title }}
+              <a target="_blank" :href="project.link">{{ project.title }}</a>
             </h3>
             <div class="modal-work__info">
-              {{ project.category }} <span class="modal-work__info-divider">|</span> {{ project.date }}
+              {{ project.category }} <span class="modal-work__info-divider">|</span>
+              {{ project.date }}
             </div>
           </div>
 
           <div class="modal-work__client">
-            <div class="modal-work__client-title">
-              Компания:
-            </div>
+            <div class="modal-work__client-title">Компания:</div>
             <div class="modal-work__client-company">
               {{ project.clientOrCompany }}
             </div>
@@ -65,66 +94,78 @@
 
           <div class="modal-work__footer">
             <button class="modal-work__btn prev" type="button">
-              <img loading="lazy" src="@/assets/images/chevron-left.svg" height="11" alt="">
+              <img
+                loading="lazy"
+                src="@/assets/images/chevron-left.svg"
+                height="11"
+                alt=""
+              />
               Previous
             </button>
             <button class="modal-work__btn next" type="button">
               Next
-              <img loading="lazy" src="@/assets/images/chevron-right.svg" height="11" alt="">
+              <img
+                loading="lazy"
+                src="@/assets/images/chevron-right.svg"
+                height="11"
+                alt=""
+              />
             </button>
           </div>
-        </div><!-- /.modal-work__content -->
-      </div><!--/.modal-work -->
-    </div><!-- /.modal__dialog -->
+        </div>
+        <!-- /.modal-work__content -->
+      </div>
+      <!--/.modal-work -->
+    </div>
+    <!-- /.modal__dialog -->
   </div>
 </template>
 
 <script>
-import modal from '@/mixins/modal'
+import modal from "@/mixins/modal";
 
 export default {
-  name: 'Project',
+  name: "Project",
   mixins: [modal],
   props: {
     project: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data: () => ({
-    activeImg: '',
-    activeImgIndex: 0
+    activeImg: "",
+    activeImgIndex: 0,
   }),
   computed: {
-    projectImgListLength: vm => vm.project.imgList.length
+    projectImgListLength: (vm) => vm.project.imgList.length,
   },
-  mounted () {
-    this.activeImg = this.project.imgList[this.activeImgIndex]
+  mounted() {
+    this.activeImg = this.project.imgList[this.activeImgIndex];
   },
   methods: {
-    showPrevImg () {
+    showPrevImg() {
       if (this.activeImgIndex < this.projectImgListLength && this.activeImgIndex > 0) {
-        this.activeImgIndex--
+        this.activeImgIndex--;
       } else if (this.activeImgIndex === 0) {
-        this.activeImgIndex = this.projectImgListLength - 1
+        this.activeImgIndex = this.projectImgListLength - 1;
       } else {
-        this.activeImgIndex--
+        this.activeImgIndex--;
       }
-      this.activeImg = this.project.imgList[this.activeImgIndex]
+      this.activeImg = this.project.imgList[this.activeImgIndex];
     },
-    showNextImg () {
+    showNextImg() {
       if (this.activeImgIndex < this.projectImgListLength - 1) {
-        console.log('1')
-        this.activeImgIndex++
+        console.log("1");
+        this.activeImgIndex++;
       } else {
-        console.log('2')
-        this.activeImgIndex = 0
+        console.log("2");
+        this.activeImgIndex = 0;
       }
-      this.activeImg = this.project.imgList[this.activeImgIndex]
-    }
-  }
-
-}
+      this.activeImg = this.project.imgList[this.activeImgIndex];
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
