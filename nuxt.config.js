@@ -1,9 +1,10 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'spa',
+  target: 'static',
   // router: {
   //   base: '/Portfolio-nuxt'
   // },
+  generate: { fallback: true },
   head: {
     title: 'Lusta Vlad Portfolio',
     // <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
