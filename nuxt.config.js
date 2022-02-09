@@ -4,7 +4,7 @@ export default {
   // router: {
   //   base: '/Portfolio-nuxt'
   // },
-  generate: { fallback: true },
+  // generate: { fallback: true },
   head: {
     title: 'Lusta Vlad Portfolio',
     // <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
@@ -39,9 +39,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/style.scss'],
-  server: {
-    port: process.env.PORT
-  },
+  // server: {
+  //   port: process.env.PORT
+  // },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axios',
@@ -86,13 +86,13 @@ export default {
     csp: {
       unsafeInlineCompatibility: true,
       reportOnly: false,
-      policies: {
-        'default-src': ["'self'"],
-        'img-src': ["'self'", 'https://mc.yandex.ru'],
-        'script-src': ["'self'", "'unsafe-inline'", 'https://mc.yandex.ru'],
-        'style-src': ["'self'", "'unsafe-inline'"],
-        'connect-src': ["'self'", 'https://mc.yandex.ru']
-      }
+      // policies: {
+      //   'default-src': ["'self'"],
+      //   'img-src': ["'self'", 'https://mc.yandex.ru'],
+      //   'script-src': ["'self'", "'unsafe-inline'", 'https://mc.yandex.ru'],
+      //   'style-src': ["'self'", "'unsafe-inline'"],
+      //   'connect-src': ["'self'", 'https://mc.yandex.ru']
+      // }
     }
   }
 }
