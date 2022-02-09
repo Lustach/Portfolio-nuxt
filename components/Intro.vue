@@ -23,8 +23,13 @@
                 <use xlink:href="@/assets/images/svgSprites.svg#telegram" xmlns="http://www.w3.org/2000/svg"></use>
               </svg>
             </a>
+            <a href="mailto:lusta.vlad2001@gmail.com" class="social__link">
+              <svg>
+                <use xlink:href="@/assets/images/svgSprites.svg#email" xmlns="http://www.w3.org/2000/svg"></use>
+              </svg>
+            </a>
           </div>
-          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>
+<!--          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>-->
           <button type="button" class="btn" data-modal="#modal_resume" @click="showResume()">Резюме</button>
         </div>
         <picture>

@@ -92,26 +92,26 @@
             <!--              optio accusantium? Sunt sed praesentium est minima.</p>-->
           </div>
 
-          <div class="modal-work__footer">
-            <button class="modal-work__btn prev" type="button">
-              <img
-                loading="lazy"
-                src="@/assets/images/chevron-left.svg"
-                height="11"
-                alt=""
-              />
-              Previous
-            </button>
-            <button class="modal-work__btn next" type="button">
-              Next
-              <img
-                loading="lazy"
-                src="@/assets/images/chevron-right.svg"
-                height="11"
-                alt=""
-              />
-            </button>
-          </div>
+<!--          <div class="modal-work__footer">-->
+<!--            <button class="modal-work__btn prev" type="button">-->
+<!--              <img-->
+<!--                loading="lazy"-->
+<!--                src="@/assets/images/chevron-left.svg"-->
+<!--                height="11"-->
+<!--                alt=""-->
+<!--              />-->
+<!--              Previous-->
+<!--            </button>-->
+<!--            <button class="modal-work__btn next" type="button">-->
+<!--              Next-->
+<!--              <img-->
+<!--                loading="lazy"-->
+<!--                src="@/assets/images/chevron-right.svg"-->
+<!--                height="11"-->
+<!--                alt=""-->
+<!--              />-->
+<!--            </button>-->
+<!--          </div>-->
         </div>
         <!-- /.modal-work__content -->
       </div>

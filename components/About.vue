@@ -121,7 +121,7 @@
               </ul>
             </div>
           </div>
-          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>
+<!--          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>-->
           <button class="btn" type="button" data-modal="#modal_resume" @click="showResume()">
             Резюме
           </button>

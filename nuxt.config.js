@@ -39,9 +39,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/style.scss'],
-  // server: {
-  //   port: process.env.PORT
-  // },
+  server: {
+    port: process.env.PORT
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axios',

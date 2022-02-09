@@ -33,7 +33,7 @@
           <a class="footer__nav-link" href="#">Обо мне</a>
           <!--          <a class="footer__nav-link" href="#">Blog</a>-->
           <!--          <a class="footer__nav-link" href="#">Contact</a>-->
-          <a class="footer__nav-link  footer__nav-link--btn"  data-modal="#modal_hire_me" @click="showHireMe()">Нанять</a>
+<!--          <a class="footer__nav-link  footer__nav-link&#45;&#45;btn"  data-modal="#modal_hire_me" @click="showHireMe()">Нанять</a>-->
         </nav>
       </div><!-- /.footer__inner -->
 

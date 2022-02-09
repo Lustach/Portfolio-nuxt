@@ -50,58 +50,58 @@
                 ДонНТУ г. Донецк
               </div>
             </div>
-            <h4 class="timeline__title">
-              Навыки:
-            </h4>
+<!--            <h4 class="timeline__title">-->
+<!--              Навыки:-->
+<!--            </h4>-->
 
-            <div class="progress-bar">
-              <h3 class="">
-                Hard:
-              </h3>
-              <div class="progress-bar__container">
-                <div class="progress-bar__item" style="display: flex;    flex-direction: column;    align-items: baseline;">
-                  <div v-for="(skill,key) in skillList.hard" :key="key" class="progress-bar__left">
-                    <div class="progress-bar__title">
-                      {{ skill.name }}
-                    </div>
-                  </div>
-                </div>
-                <div class="progress-bar__progress__container" style="padding-left: 1.2rem;">
-                  <div v-for="(skill,key) in skillList.hard" :key="key" class="progress-bar__item">
-                    <div class="progress-bar__right">
-                      <div class="progress-bar__bar">
-                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 class="">
-                Soft:
-              </h3>
-              <div class="progress-bar__container">
-                <div class="progress-bar__item" style="display: flex;    flex-direction: column;    align-items: baseline;">
-                  <div v-for="(skill,key) in skillList.soft" :key="key" class="progress-bar__left">
-                    <div class="progress-bar__title">
-                      {{ skill.name }}
-                    </div>
-                  </div>
-                </div>
-                <div class="progress-bar__progress__container" style="padding-left: 1.2rem;">
-                  <div v-for="(skill,key) in skillList.soft" :key="key" class="progress-bar__item">
-                    <div class="progress-bar__right">
-                      <div class="progress-bar__bar">
-                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--            <div class="progress-bar">-->
+<!--              <h3 class="">-->
+<!--                Hard:-->
+<!--              </h3>-->
+<!--              <div class="progress-bar__container">-->
+<!--                <div class="progress-bar__item" style="display: flex;    flex-direction: column;    align-items: baseline;">-->
+<!--                  <div v-for="(skill,key) in skillList.hard" :key="key" class="progress-bar__left">-->
+<!--                    <div class="progress-bar__title">-->
+<!--                      {{ skill.name }}-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="progress-bar__progress__container" style="padding-left: 1.2rem;">-->
+<!--                  <div v-for="(skill,key) in skillList.hard" :key="key" class="progress-bar__item">-->
+<!--                    <div class="progress-bar__right">-->
+<!--                      <div class="progress-bar__bar">-->
+<!--                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}"/>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <h3 class="">-->
+<!--                Soft:-->
+<!--              </h3>-->
+<!--              <div class="progress-bar__container">-->
+<!--                <div class="progress-bar__item" style="display: flex;    flex-direction: column;    align-items: baseline;">-->
+<!--                  <div v-for="(skill,key) in skillList.soft" :key="key" class="progress-bar__left">-->
+<!--                    <div class="progress-bar__title">-->
+<!--                      {{ skill.name }}-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="progress-bar__progress__container" style="padding-left: 1.2rem;">-->
+<!--                  <div v-for="(skill,key) in skillList.soft" :key="key" class="progress-bar__item">-->
+<!--                    <div class="progress-bar__right">-->
+<!--                      <div class="progress-bar__bar">-->
+<!--                        <div class="progress-bar__progress" :style="{width: skill.progress + '%'}"/>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div><!-- /.timeline__col -->
         <div class="text-center">
-          <a class="btn" href="#" data-modal="#modal_hire_me" @click="showHireMe()">Нанять</a>
+<!--          <a class="btn" href="#" data-modal="#modal_hire_me" @click="showHireMe()">Нанять</a>-->
         </div>
       </div><!-- /.timeline -->
     </div><!-- /.modal__content -->
@@ -137,9 +137,8 @@ export default {
         date_end: '2021',
         company: 'Фрилансер',
         position: 'Front-end разработчик',
-        description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est
-                  corporis in
-                  facilis eum quae sint aliquam, ipsam?`
+        description: `Разработка проектов различной сложности. Разработка одностраничных лендингов. Разработка виджетов по поиску автозапчастей. Выполнено полное проектирование проекта с нуля и реализация бизнес-задач по созданию системы подбора автозапчастей. Система предоставляет весь необходимый функционал по удобному подбору по фильтрам, сортировкам, заказам, продажам и поиску запчастей для автомобилей.
+Использованы технологии: Vue,Vuetify, JavaScript, TypeScript.`
       }, {
         date_start: '2019',
         date_end: '2020',
