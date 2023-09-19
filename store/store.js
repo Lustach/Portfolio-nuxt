@@ -1,8 +1,8 @@
 import Vue from "vue";
-import Vuex, { Store } from "vuex";
+import Vuex from "vuex";
 import projects from "~/store/projects";
 Vue.use(Vuex);
-export default Store({
+export default new Vuex.Store({
   state: {
     isShowProjectModal: false,
   },
