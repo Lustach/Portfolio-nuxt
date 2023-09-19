@@ -39,7 +39,7 @@
                     <li>SCSS</li>
                     <li>Gulp</li>
                   </ul>
-                  <h4>Могу использовать:</h4>
+                  <h4>Владею:</h4>
                   <ul>
                     <li>PUG</li>
                     <li>Less</li>
@@ -58,7 +58,7 @@
                     <li>Pnpm</li>
                     <li>Webpack</li>
                   </ul>
-                  <h4>Могу использовать:</h4>
+                  <h4>Владею:</h4>
                   <ul>
                     <li>Nuxt</li>
                     <li>Vite/RollUp</li>
@@ -72,7 +72,7 @@
                   <ul>
                     <li>Cypress</li>
                   </ul>
-                  <h4>Могу использовать:</h4>
+                  <h4>Владею:</h4>
                   <ul>
                     <li>Jest/Vue-test-utils</li>
                   </ul>
@@ -87,7 +87,7 @@
                     <li>Quasar</li>
                     <li>Naive-ui</li>
                   </ul>
-                  <h4>Могу использовать:</h4>
+                  <h4>Владею:</h4>
                   <ul>
                     <li>Element-ui</li>
                     <li>Bootstrap-Vue</li>
@@ -113,7 +113,7 @@
                     <li>Fastify</li>
                     <li>MongoDB</li>
                   </ul>
-                  <h4>Могу использовать:</h4>
+                  <h4>Владею:</h4>
                   <ul>
                     <li>Express</li>
                   </ul>

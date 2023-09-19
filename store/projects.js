@@ -2,14 +2,23 @@ export default {
   state: {
     projectList: [
       {
+        title: 'Citadel.one',
+        description: '',
+        clientOrCompany: 'Citadel.one',
+        category: 'super app',
+        skillStacks: ['vue 3', 'web 3'],
+        link: 'https://app.citadel.one',
+        date: '2022 - 2023'
+      },
+      {
         title: 'VoBlago',
         description: 'Выполнено проектирование и разработка с нуля личного кабинета для проекта-агрегатора фондов НКО. Приложение позволяет удобно просматривать фонды и программы, осуществлять пожертвования, как в криптовалюте, так и через обычные платёжные системы. Личный кабинет позволяет зарегистрировать фонд пользователя, проводить быструю настройку его данных, подключать 2 факторную аутентификацию а так же просматривать поступления и собранные деньги с терминалов в виде графиков и таблиц. ',
         clientOrCompany: 'TrinityGroup',
         category: 'Приложение',
         link: 'https://voblago.io/',
-        skillStacks: ['vue', 'Element-UI', 'Cypress', 'Jest'],
+        skillStacks: ['vue 3', 'vue 2', 'Element-UI', 'Cypress', 'Jest'],
         // путь к картинкам в assets/images/projects
-        imgList: ['voblago/vblg.png', 'voblago/vblg1.png', 'voblago/vblg2.png', 'voblago/vblg3.png', 'voblago/vblg4.png', 'voblago/vblg5.png', 'voblago/vblg6.png', 'voblago/vblg7.png', 'voblago/vblg8.png',],
+        imgList: ['voblago/vblg.png', 'voblago/vblg1.png', 'voblago/vblg2.png', 'voblago/vblg3.png', 'voblago/vblg4.png', 'voblago/vblg5.png', 'voblago/vblg6.png', 'voblago/vblg7.png', 'voblago/vblg8.png'],
         // img: 'https://placehold.it/370x250',
         // category: 'website',
         date: '2021 - 2022'
@@ -76,7 +85,7 @@ export default {
         link: 'https://chromatograf.ru/',
         skillStacks: ['html', 'saas', 'bootstrap', 'gulp', 'jquery'],
         // путь к картинкам в assets/images/projects
-        imgList: ['chromotograph/chrm.png', 'chromotograph/chrm1.png', 'chromotograph/chrm2.png', 'chromotograph/chrm3.png', 'chromotograph/chrm4.png', 'chromotograph/chrm5.png', 'chromotograph/chrm6.png',],
+        imgList: ['chromotograph/chrm.png', 'chromotograph/chrm1.png', 'chromotograph/chrm2.png', 'chromotograph/chrm3.png', 'chromotograph/chrm4.png', 'chromotograph/chrm5.png', 'chromotograph/chrm6.png'],
         // img: 'https://placehold.it/370x250',
         // category: 'website',
         date: '2021'
@@ -117,7 +126,7 @@ export default {
         link: 'https://blagoedelo.org/',
         skillStacks: ['html', 'scss', 'gulp'],
         // путь к картинкам в assets/images/projects
-        imgList: ['blagoeDelo/bd1.png',],
+        imgList: ['blagoeDelo/bd1.png'],
         // img: 'https://placehold.it/370x250',
         // category: 'website',
         date: '2021'
@@ -147,10 +156,10 @@ export default {
         // img: 'https://placehold.it/370x250',
         // category: 'website',
         date: '2020'
-      },
+      }
 
     ]
   },
   mutations: {},
-  getters: {},
+  getters: {}
 }
