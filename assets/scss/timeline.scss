@@ -71,7 +71,7 @@
 
   &__date {
     display: block;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
 
     text-decoration: underline;
     font-size: 0.94rem;
@@ -79,7 +79,7 @@
   }
 
   &__subtitle {
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
 
     font-size: 1.06rem;
     color: $black;
@@ -87,15 +87,15 @@
   }
 
   &__position {
-    font-size: .94rem;
+    font-size: 0.94rem;
     color: $black;
     font-style: italic;
   }
 
   &__text {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
 
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     color: $gray;
     font-weight: 300;

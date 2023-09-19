@@ -15,7 +15,7 @@ export default {
       lang: "en",
     },
     meta: [
-      { charset: "utf-8", },
+      { charset: "utf-8" },
       {
         name: "viewport",
         content: "width=device-width, initial-scale=1",
@@ -30,23 +30,22 @@ export default {
         content: "telephone=no",
       },
     ],
-    link: [ {
-      rel: "icon",
-      type: "image/x-icon",
-      href: "/favicon.ico",
-    }, ],
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [ "~/assets/scss/style.scss", ],
+  css: ["~/assets/scss/style.scss"],
   server: {
     port: process.env.PORT,
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    "~/plugins/axios",
-    "~/plugins/vee-validate/vee-validate",
-  ],
+  plugins: ["~/plugins/axios", "~/plugins/vee-validate/vee-validate"],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
   loading: false,
@@ -72,9 +71,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true,
-    transpile: [
-      "vee-validate",
-    ],
+    transpile: ["vee-validate"],
   },
 
   render: {

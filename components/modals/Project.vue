@@ -2,7 +2,11 @@
   <div id="modal_project" class="modal">
     <div class="modal__dialog">
       <button class="modal__close" type="button" @click="close()">
-        <img loading="lazy" src="@/assets/images/times-circle.svg" alt="Close" />
+        <img
+          loading="lazy"
+          src="@/assets/images/times-circle.svg"
+          alt="Close"
+        />
       </button>
       <div class="modal-work">
         <div class="modal-work__preview">
@@ -27,7 +31,7 @@
               class="carousel__items_circle"
             />
           </div>
-          <div v-if="" class="carousel__actions">
+          <div class="carousel__actions">
             <button
               class="modal-work__btn prev"
               type="button"
@@ -64,7 +68,8 @@
               <a target="_blank" :href="project.link">{{ project.title }}</a>
             </h3>
             <div class="modal-work__info">
-              {{ project.category }} <span class="modal-work__info-divider">|</span>
+              {{ project.category }}
+              <span class="modal-work__info-divider">|</span>
               {{ project.date }}
             </div>
           </div>
@@ -92,26 +97,26 @@
             <!--              optio accusantium? Sunt sed praesentium est minima.</p>-->
           </div>
 
-<!--          <div class="modal-work__footer">-->
-<!--            <button class="modal-work__btn prev" type="button">-->
-<!--              <img-->
-<!--                loading="lazy"-->
-<!--                src="@/assets/images/chevron-left.svg"-->
-<!--                height="11"-->
-<!--                alt=""-->
-<!--              />-->
-<!--              Previous-->
-<!--            </button>-->
-<!--            <button class="modal-work__btn next" type="button">-->
-<!--              Next-->
-<!--              <img-->
-<!--                loading="lazy"-->
-<!--                src="@/assets/images/chevron-right.svg"-->
-<!--                height="11"-->
-<!--                alt=""-->
-<!--              />-->
-<!--            </button>-->
-<!--          </div>-->
+          <!--          <div class="modal-work__footer">-->
+          <!--            <button class="modal-work__btn prev" type="button">-->
+          <!--              <img-->
+          <!--                loading="lazy"-->
+          <!--                src="@/assets/images/chevron-left.svg"-->
+          <!--                height="11"-->
+          <!--                alt=""-->
+          <!--              />-->
+          <!--              Previous-->
+          <!--            </button>-->
+          <!--            <button class="modal-work__btn next" type="button">-->
+          <!--              Next-->
+          <!--              <img-->
+          <!--                loading="lazy"-->
+          <!--                src="@/assets/images/chevron-right.svg"-->
+          <!--                height="11"-->
+          <!--                alt=""-->
+          <!--              />-->
+          <!--            </button>-->
+          <!--          </div>-->
         </div>
         <!-- /.modal-work__content -->
       </div>
@@ -145,7 +150,10 @@ export default {
   },
   methods: {
     showPrevImg() {
-      if (this.activeImgIndex < this.projectImgListLength && this.activeImgIndex > 0) {
+      if (
+        this.activeImgIndex < this.projectImgListLength &&
+        this.activeImgIndex > 0
+      ) {
         this.activeImgIndex--;
       } else if (this.activeImgIndex === 0) {
         this.activeImgIndex = this.projectImgListLength - 1;
@@ -156,10 +164,8 @@ export default {
     },
     showNextImg() {
       if (this.activeImgIndex < this.projectImgListLength - 1) {
-        console.log("1");
         this.activeImgIndex++;
       } else {
-        console.log("2");
         this.activeImgIndex = 0;
       }
       this.activeImg = this.project.imgList[this.activeImgIndex];

@@ -1,15 +1,15 @@
 .work {
-  box-shadow: 0 0 4px rgba(#000, .25);
+  box-shadow: 0 0 4px rgba(#000, 0.25);
   border-radius: 10px;
   overflow: hidden;
   max-width: 370px;
-  transition: box-shadow .2s linear;
+  transition: box-shadow 0.2s linear;
   margin: 0 auto;
   width: 100%;
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 25px rgba(#000, .25);
+    box-shadow: 0 0 25px rgba(#000, 0.25);
   }
 
   &__image {
@@ -28,7 +28,7 @@
   }
 
   &__cat {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: $black;
     text-transform: uppercase;
     margin-bottom: 0.5rem;

@@ -8,47 +8,75 @@
           <div class="intro__text">Frontend-разработчик</div>
           <div class="social">
             <!-- Svg sprites -->
-            <a href="https://vk.com/tartarin3" class="social__link social__link_vk">
+            <a
+              href="https://vk.com/tartarin3"
+              class="social__link social__link_vk"
+            >
               <svg>
-                <use xlink:href="@/assets/images/svgSprites.svg#vk" xmlns="http://www.w3.org/2000/svg"></use>
+                <use
+                  xlink:href="@/assets/images/svgSprites.svg#vk"
+                  xmlns="http://www.w3.org/2000/svg"
+                ></use>
               </svg>
             </a>
-            <a href="https://github.com/Lustach" class="social__link social__link_github">
+            <a
+              href="https://github.com/Lustach"
+              class="social__link social__link_github"
+            >
               <svg>
-                <use xlink:href="@/assets/images/svgSprites.svg#github" xmlns="http://www.w3.org/2000/svg"></use>
+                <use
+                  xlink:href="@/assets/images/svgSprites.svg#github"
+                  xmlns="http://www.w3.org/2000/svg"
+                ></use>
               </svg>
             </a>
             <a href="https://t.me/Lustach" class="social__link">
               <svg>
-                <use xlink:href="@/assets/images/svgSprites.svg#telegram" xmlns="http://www.w3.org/2000/svg"></use>
+                <use
+                  xlink:href="@/assets/images/svgSprites.svg#telegram"
+                  xmlns="http://www.w3.org/2000/svg"
+                ></use>
               </svg>
             </a>
             <a href="mailto:lusta.vlad2001@gmail.com" class="social__link">
               <svg>
-                <use xlink:href="@/assets/images/svgSprites.svg#email" xmlns="http://www.w3.org/2000/svg"></use>
+                <use
+                  xlink:href="@/assets/images/svgSprites.svg#email"
+                  xmlns="http://www.w3.org/2000/svg"
+                ></use>
               </svg>
             </a>
           </div>
-<!--          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>-->
-          <button type="button" class="btn" data-modal="#modal_resume" @click="showResume()">Резюме</button>
+          <!--          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>-->
+          <button
+            type="button"
+            class="btn"
+            data-modal="#modal_resume"
+            @click="showResume()"
+          >
+            Резюме
+          </button>
         </div>
         <picture>
-          <source srcset="@/assets/images/photo.webp" type="image/webp">
-          <img loading="lazy" src="@/assets/images/photo.png" class="intro__photo" alt=""/></picture>
+          <source srcset="@/assets/images/photo.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="@/assets/images/photo.png"
+            class="intro__photo"
+            alt=""
+        /></picture>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import modal from '@/mixins/modal'
+import modal from "@/mixins/modal";
 
 export default {
-  name: 'Intro',
-  mixins: [modal]
-}
+  name: "Intro",
+  mixins: [modal],
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

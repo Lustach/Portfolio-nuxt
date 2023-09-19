@@ -10,14 +10,15 @@
 
   &__label {
     display: inline-block;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
 
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: $black;
     font-weight: 700;
   }
 
-  &__input, &__textarea {
+  &__input,
+  &__textarea {
     display: block;
     width: 100%;
     padding: 1.3rem 1.8rem;
@@ -26,7 +27,7 @@
     border-radius: 1.8rem;
 
     font-family: inherit;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.2;
     font-weight: 300;
     color: $black;
@@ -48,7 +49,6 @@
     &::placeholder {
       color: $black;
     }
-
   }
 
   &__textarea {
@@ -71,5 +71,3 @@
     }
   }
 }
-
-

@@ -4,30 +4,40 @@
       <div class="about__inner">
         <div class="about__photo">
           <picture>
-            <source srcset="@/assets/images/designer_photo.webp" type="image/webp">
-            <img loading="lazy" src="@/assets/images/designer_photo.png" class="intro__photo img" alt=""></picture>
+            <source
+              srcset="@/assets/images/designer_photo.webp"
+              type="image/webp" />
+            <img
+              loading="lazy"
+              src="@/assets/images/designer_photo.png"
+              class="intro__photo img"
+              alt=""
+          /></picture>
         </div>
         <div class="about__content">
-          <h3 class="about__title">
-            Обо мне
-          </h3>
-          <h2 class="about__bigtitle">
-            КТО ЖЕ Я?
-          </h2>
+          <h3 class="about__title">Обо мне</h3>
+          <h2 class="about__bigtitle">КТО ЖЕ Я?</h2>
           <div class="about__text">
             <p>
-              Я профессионально занимаюсь Frontend-ом уже более двух лет, и за это время успел многому научиться
-              и поучаствовать в разработке крутых (и не очень :D ) приложений, а некоторые даже создал с нуля.
-              Имею опыт поддержки, оптимизации сайтов и рефакторинга кода, разработки SPA(таблицы, сортировки, формы, валидации, графики), лендингов, виджетов, скриптов
-              различной сложности, разработка UI-компонентов,всё это с
-              использованием зарекомендовавших себя практик(KISS,DRY,SOLID,YAGNI) и подходов.
+              Я профессионально занимаюсь Frontend-ом уже более двух лет, и за
+              это время успел многому научиться и поучаствовать в разработке
+              крутых (и не очень :D ) приложений, а некоторые даже создал с
+              нуля. Имею опыт поддержки, оптимизации сайтов и рефакторинга кода,
+              разработки SPA(таблицы, сортировки, формы, валидации, графики),
+              лендингов, виджетов, скриптов различной сложности, разработка
+              UI-компонентов,всё это с использованием зарекомендовавших себя
+              практик(KISS,DRY,SOLID,YAGNI) и подходов.
             </p>
             <p>
-              Предлагаю свои услуги с полным пониманием, что на мне лежит ответственность за выполнение задач.
-              Понимаю, что предстоит работа в команде над проектами,
-              и буду безумно рад если команда будет заинтересована в качестве выполнения работы и соблюдать рационализм.
-              Всю прочую информацию вы найдёте
-              <a href="https://hh.ru/resume/d35c57baff0728b9b40039ed1f4c534a526557">здесь.</a>
+              Предлагаю свои услуги с полным пониманием, что на мне лежит
+              ответственность за выполнение задач. Понимаю, что предстоит работа
+              в команде над проектами, и буду безумно рад если команда будет
+              заинтересована в качестве выполнения работы и соблюдать
+              рационализм. Всю прочую информацию вы найдёте
+              <a
+                href="https://hh.ru/resume/d35c57baff0728b9b40039ed1f4c534a526557"
+                >здесь.</a
+              >
             </p>
             <div class="about__list__container" tabindex="0">
               <ul>
@@ -121,8 +131,13 @@
               </ul>
             </div>
           </div>
-<!--          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>-->
-          <button class="btn" type="button" data-modal="#modal_resume" @click="showResume()">
+          <!--          <a class="btn" data-modal="#modal_hire_me" @click="showHireMe">Нанять</a>-->
+          <button
+            class="btn"
+            type="button"
+            data-modal="#modal_resume"
+            @click="showResume()"
+          >
             Резюме
           </button>
         </div>
@@ -132,16 +147,13 @@
 </template>
 
 <script>
-import modal from '@/mixins/modal'
+import modal from "@/mixins/modal";
 
 export default {
-  name: 'About',
+  name: "About",
   mixins: [modal],
-  methods: {
-  }
-}
+  methods: {},
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

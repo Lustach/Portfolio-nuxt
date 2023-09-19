@@ -40,11 +40,11 @@
     cursor: pointer;
 
     position: absolute;
-    top: .9rem;
+    top: 0.9rem;
     right: 1rem;
     z-index: 1;
 
-    transition: transform .2s linear;
+    transition: transform 0.2s linear;
 
     &:hover {
       transform: translateY(-3px);

@@ -6,7 +6,6 @@
   align-items: center;
 
   &__link {
-
     &--block {
       @media ($tablet) {
         //margin: 50% 0;
@@ -49,7 +48,7 @@
     border-radius: 20px;
 
     &:after {
-      content: ''; // чтобы появился элемент нужно задать контент, в данном случае это не символы, а ''
+      content: ""; // чтобы появился элемент нужно задать контент, в данном случае это не символы, а ''
       width: 0;
       height: 2px;
       background-color: $black;
@@ -57,7 +56,7 @@
       bottom: -5px;
       left: 0;
       z-index: 1;
-      transition: width .2s linear;
+      transition: width 0.2s linear;
     }
 
     //not - при наведении нет класса
@@ -71,26 +70,27 @@
     &--btn {
       padding: 0.66rem 2rem;
       border: 2px solid $black;
-      transition: background-color .2s linear, color .2s linear;
+      transition:
+        background-color 0.2s linear,
+        color 0.2s linear;
 
       &:hover {
         background-color: $black;
         color: white;
       }
     }
-    &:focus{
+    &:focus {
       outline: none;
       &:after {
         width: 100%;
       }
-      &:last-child{
+      &:last-child {
         background-color: $black;
         color: white;
-        &:after{
+        &:after {
           display: none;
         }
       }
     }
   }
-
 }

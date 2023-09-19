@@ -1,16 +1,15 @@
-.social{
-  margin:1.8rem 0;
-  &__link{
-    svg{
+.social {
+  margin: 1.8rem 0;
+  &__link {
+    svg {
       border-radius: 3px;
-      width:41px;
-      height:41px;
-      padding:0.4rem;
-      transition: transform .2s linear;
-      &:hover{
-        transform:
-        translateY(-5px);
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 41px;
+      height: 41px;
+      padding: 0.4rem;
+      transition: transform 0.2s linear;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         fill: $blue;
       }
     }
@@ -19,8 +18,6 @@
     //}
   }
 }
-a:link{
+a:link {
   text-decoration: none;
 }
-
-

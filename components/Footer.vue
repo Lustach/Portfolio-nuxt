@@ -56,7 +56,7 @@ import modal from "@/mixins/modal";
 
 export default {
   name: "Footer",
-  mixins: [ modal, ],
+  mixins: [modal],
 };
 </script>
 

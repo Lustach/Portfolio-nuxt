@@ -6,7 +6,7 @@
     width: 41px;
     height: 41px;
     fill: white;
-    transition: transform .2s linear;
+    transition: transform 0.2s linear;
 
     &:hover {
       transform: translateY(-5px);
@@ -37,11 +37,11 @@
   }
 
   &__copyright {
-    padding-right: .8rem;
+    padding-right: 0.8rem;
     margin-right: 1rem;
 
-    font-size: .94rem;
-    color: #BBBBCC;
+    font-size: 0.94rem;
+    color: #bbbbcc;
 
     border-right: 1px solid fade($gray, 35%);
     @media ($mobile) {
@@ -56,7 +56,7 @@
     a {
       margin-right: 0.2rem;
       text-decoration: none;
-      svg{
+      svg {
         border-radius: 20px;
         padding: 0.4rem;
       }
@@ -70,7 +70,7 @@
   &__nav {
     display: flex;
     align-items: center;
-    font-size: .94rem;
+    font-size: 0.94rem;
     @media ($tablet-big) {
       justify-content: center;
     }
@@ -83,16 +83,15 @@
   &__nav-link {
     margin-left: 1.5rem;
 
-    color: #BBBBCC;
+    color: #bbbbcc;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
     }
 
-
     &--btn {
-      padding: .5rem 1.4rem;
+      padding: 0.5rem 1.4rem;
 
       border-radius: 20px;
       border: 1px solid $gray-light;
@@ -103,8 +102,8 @@
 
       &:hover {
         text-decoration: none;
-        background-color: #BBBBCC;
-        border-color: #BBBBCC;
+        background-color: #bbbbcc;
+        border-color: #bbbbcc;
         color: $black;
       }
     }

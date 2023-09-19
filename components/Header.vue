@@ -4,21 +4,40 @@
       <div class="header__inner">
         <div class="user">
           <div class="user__avatar">
-<!--            <img loading="lazy" src="" alt=""/>-->
+            <!--            <img loading="lazy" src="" alt=""/>-->
           </div>
           <div class="user__content">
-            <div class="user__name">Влад <br> Луста</div>
+            <div class="user__name">
+              Влад <br />
+              Луста
+            </div>
             <div class="user__prof">Frontend Developer</div>
           </div>
         </div>
         <nav class="nav">
-          <div class="nav__link--block" :class="{'mobile-menu':isMobileMenu}">
-            <a v-for="(item,key) in menu" :key="key" :href="item.to" class="nav__link" @click="showMobileMenu()">{{ item.name }}</a>
-<!--            <a class="nav__link nav__link&#45;&#45;btn" data-modal="#modal_hire_me" @click="showHireMe();showMobileMenu()">Нанять</a>-->
+          <div
+            class="nav__link--block"
+            :class="{ 'mobile-menu': isMobileMenu }"
+          >
+            <a
+              v-for="(item, key) in menu"
+              :key="key"
+              :href="item.to"
+              class="nav__link"
+              @click="showMobileMenu()"
+              >{{ item.name }}</a
+            >
+            <!--            <a class="nav__link nav__link&#45;&#45;btn" data-modal="#modal_hire_me" @click="showHireMe();showMobileMenu()">Нанять</a>-->
           </div>
         </nav>
         <div class="burger">
-          <img loading="lazy" class="burger__icon" src="@/assets/images/bars.svg" alt="" @click="showMobileMenu()"/>
+          <img
+            loading="lazy"
+            class="burger__icon"
+            src="@/assets/images/bars.svg"
+            alt=""
+            @click="showMobileMenu()"
+          />
         </div>
       </div>
     </div>
@@ -26,23 +45,23 @@
 </template>
 
 <script>
-import modal from '@/mixins/modal'
+import modal from "@/mixins/modal";
 // import { setBodyOverflow, deleteBodyOverflow } from '~/util/body'
 
 export default {
-  name: 'Header',
+  name: "Header",
   mixins: [modal],
   data: () => ({
     isMobileMenu: false,
     menu: [
       {
-        name: 'Проекты',
-        to: '#work',
+        name: "Проекты",
+        to: "#work",
         toShow: true,
       },
       {
-        name: 'Обо мне',
-        to: '#about_me',
+        name: "Обо мне",
+        to: "#about_me",
         toShow: true,
       },
       // {
@@ -55,11 +74,10 @@ export default {
       //   to: '#contacts',
       //   toShow: false,
       // }
-    ]
+    ],
   }),
-  methods: {
-  }
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">
@@ -90,7 +108,7 @@ export default {
     height: 47px;
     margin-right: 9px;
     box-sizing: content-box;
-    background: #8D8D8E;
+    background: #8d8d8e;
     border-radius: 50%;
     img {
       border-radius: 50%;

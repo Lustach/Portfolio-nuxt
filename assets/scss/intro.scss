@@ -53,10 +53,9 @@
     right: 0;
     @media ($tablet-big) {
       width: 350px;
-
     }
     @media ($tablet-sm) {
-      display: none
+      display: none;
     }
   }
 }

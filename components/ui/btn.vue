@@ -1,24 +1,21 @@
 <template>
   <div class="text-center">
     <button class="btn btn--sm">
-      <slot>
-      </slot>
+      <slot> </slot>
     </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'btn',
+  name: "Btn",
   props: {
     name: {
       required: true,
-      type: String
-    }
-  }
-}
+      type: String,
+    },
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

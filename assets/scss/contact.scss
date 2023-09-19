@@ -25,16 +25,17 @@
     padding: 0;
     list-style: none;
 
-    font-size: .94rem;
+    font-size: 0.94rem;
     color: $black;
     font-weight: 300;
   }
 
   &__info-item {
-    &, & a {
+    &,
+    & a {
       display: flex;
       align-items: center;
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
       text-decoration: none;
       color: $black;
     }
@@ -45,7 +46,7 @@
   }
 
   &__info-icon {
-    margin-right: .75rem;
+    margin-right: 0.75rem;
     max-height: 0.95rem;
     min-width: 14px;
   }

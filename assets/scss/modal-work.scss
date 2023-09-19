@@ -66,13 +66,13 @@
   }
 
   &__title {
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
 
     font-size: 2.12rem;
     font-weight: 700;
     color: $black;
     text-transform: uppercase;
-    a{
+    a {
       color: initial;
       text-decoration: underline;
     }
@@ -91,7 +91,7 @@
   }
 
   &__client-title {
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
 
     font-size: 1.06rem;
     color: $black;
@@ -99,7 +99,7 @@
   }
 
   &__client-company {
-    font-size: .94rem;
+    font-size: 0.94rem;
     font-style: italic;
     color: $gray;
   }
@@ -108,7 +108,7 @@
     margin-bottom: 8.66rem;
     //max-height: 410px;
     //overflow-y: auto;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 2;
     color: $gray;
     font-weight: 300;
@@ -137,7 +137,7 @@
     cursor: pointer;
 
     font-family: inherit;
-    font-size: .94rem;
+    font-size: 0.94rem;
     color: $black;
     text-transform: uppercase;
   }

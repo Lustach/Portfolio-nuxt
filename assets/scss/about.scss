@@ -1,7 +1,7 @@
 .about {
   margin: 8.4rem 0;
-  @media ($tablet-big){
-    margin:1rem;
+  @media ($tablet-big) {
+    margin: 1rem;
   }
   &__inner {
     display: flex;
@@ -10,8 +10,8 @@
       //display:none;
       flex-direction: column-reverse;
     }
-    @media ($mobile){
-      margin-bottom:1rem;
+    @media ($mobile) {
+      margin-bottom: 1rem;
     }
   }
 
@@ -22,8 +22,8 @@
     @media ($tablet) {
       width: 100%;
     }
-    @media ($mobile){
-      padding-left:0.5rem;
+    @media ($mobile) {
+      padding-left: 0.5rem;
     }
   }
 
@@ -45,19 +45,18 @@
         align-self: center;
         position: relative;
       }
-
     }
     @media ($mobile) {
-      width:100%
+      width: 100%;
     }
     width: 50%;
 
     &:before {
-      content: '';
+      content: "";
       max-width: 413px; //
       width: 100%; //
       height: 413px;
-      background-color: #EFEFEF;
+      background-color: #efefef;
       position: absolute;
       left: 1rem;
       bottom: 0;
@@ -71,7 +70,6 @@
         display: none;
       }
     }
-
   }
 
   //
@@ -82,14 +80,13 @@
     @media ($notebook) {
       font-size: 2.5rem;
     }
-
   }
 
   &__bigtitle {
     font-size: 5.8rem;
     line-height: 1.1;
     margin-bottom: 1.4rem;
-    color: rgba($black, .15);
+    color: rgba($black, 0.15);
     font-weight: 700;
     /*ml равносилен position:relative, left:-10px; ????*/
     margin-left: -10px;
@@ -98,26 +95,26 @@
     @media ($notebook) {
       font-size: 4rem;
     }
-    @media ($mobile){
+    @media ($mobile) {
       font-size: 3rem;
     }
   }
 
   &__text {
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 2;
     color: $gray;
     font-weight: 300;
     margin-bottom: 2.8rem;
-    ul,ol{
+    ul,
+    ol {
       padding-left: 0.6rem;
     }
-    > ul{
+    > ul {
       padding: 0;
     }
-
   }
-  &__list__container{
+  &__list__container {
     display: flex;
     overflow-x: scroll;
     width: 100%;
@@ -125,4 +122,3 @@
     max-width: 450px;
   }
 }
-

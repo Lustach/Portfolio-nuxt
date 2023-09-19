@@ -5,15 +5,15 @@
 // }
 // import $axios from '@nuxtjs/axios'
 export default function ({ $axios }, inject) {
-  $axios.setBaseURL('http://127.0.0.1:9000/')
+  $axios.setBaseURL("http://127.0.0.1:9000/");
   const API = {
     projects: {},
     email: {
-      sendEmail: data => $axios.$post('/send_email', data)
+      sendEmail: (data) => $axios.$post("/send_email", data),
     },
-    test: () => $axios.get('/test1')
-  }
-  inject('API', API)
+    test: () => $axios.get("/test1"),
+  };
+  inject("API", API);
   // API: {
   //   test: () => $axios.get('/test1')
   // }

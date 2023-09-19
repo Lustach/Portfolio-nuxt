@@ -4,25 +4,25 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -1rem;
-  &__tablet{
-    &--date{
-      display:none;
+  &__tablet {
+    &--date {
+      display: none;
       font-weight: lighter;
-      @media ($tablet){
-      display:block;
-    }
+      @media ($tablet) {
+        display: block;
+      }
     }
   }
   &__col {
     width: 33.33333%;
     padding: 0 1rem;
-    @media ($tablet){
-    width: 100%;
-    padding: 0 5rem;
-  }
-    @media ($mobile){
-    padding: 0 1rem;
-  }
+    @media ($tablet) {
+      width: 100%;
+      padding: 0 5rem;
+    }
+    @media ($mobile) {
+      padding: 0 1rem;
+    }
   }
 
   &__item {
@@ -32,10 +32,10 @@
   &__header {
     position: relative;
     margin-bottom: 1.35rem;
-    @media ($tablet){
-    display: flex;
-    justify-content: center;
-  }
+    @media ($tablet) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__content {
@@ -59,9 +59,9 @@
     top: 0;
     left: 0;
     z-index: 1;
-    @media ($tablet){
-    display:none;
-  }
+    @media ($tablet) {
+      display: none;
+    }
   }
 
   &__photo {
@@ -71,7 +71,7 @@
   }
 
   &__title {
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
 
     font-size: 1.2rem;
     color: $black;
@@ -86,33 +86,24 @@
         text-decoration: underline;
       }
     }
-    @media ($tablet){
-    display: flex;
-    justify-content: space-evenly;
-  }
+    @media ($tablet) {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
 
   &__cat {
     margin-bottom: 1.5rem;
 
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: $black;
     text-transform: uppercase;
   }
 
   &__text {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: $gray;
     font-weight: 300;
     line-height: 2;
   }
 }
-
-
-
-
-
-
-
-
-
